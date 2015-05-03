@@ -1,4 +1,4 @@
-use Test::More;
+use Test::More tests => 3;
 
 use Rex::Helper::Path;
 
@@ -12,5 +12,3 @@ if ( $^O !~ m/^MSWin/ ) {
   $path = Rex::Helper::Path::resolv_path("~/bar/baz");
   like( $path, qr{^/}, "expanded \$HOME - no local" );
 }
-
-done_testing();
