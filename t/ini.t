@@ -18,11 +18,11 @@ unless ( $have_mods{'String::Escape'} ) {
     'String::Escape module not found. INI file support won\'t be available.';
 }
 else {
-  plan tests => 30;
+  plan tests => 31;
+  use_ok 'Rex::Group::Lookup::INI';
 }
 
 use Rex::Group;
-use Rex::Group::Lookup::INI;
 use Rex::Commands;
 
 no warnings 'once';

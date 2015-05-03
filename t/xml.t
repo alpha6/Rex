@@ -16,10 +16,10 @@ unless ( $have_mods{'XML::LibXML'} ) {
     'XML::LibXML module not available. XML group support won\'t be available.';
 }
 else {
-  plan tests => 6;
+  plan tests => 7;
+  use_ok 'Rex::Group::Lookup::XML';
 }
 
-use Rex::Group::Lookup::XML;
 use Rex::Group;
 use Rex::Commands;
 
