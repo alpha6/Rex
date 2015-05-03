@@ -2,6 +2,21 @@ use strict;
 use warnings;
 
 use Test::More tests => 166;
+use Test::UseAllModules;
+
+BEGIN {
+  all_uses_ok except => qw(
+    Rex::Commands::DB
+    Rex::Group::Lookup::DBI
+    Rex::Helper::DBI
+    Rex::Interface::Connection::SSH
+    Rex::Interface::Connection::OpenSSH
+    Rex::Output::JUnit
+    Rex::Output
+    Rex::TaskList::Parallel_ForkManager
+    Rex::Cloud::Amazon
+  );
+}
 
 my %have_mods = (
   'Net::SSH2'             => 1,
