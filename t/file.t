@@ -9,6 +9,7 @@ use Test::More tests => 52;
 use Rex::Commands::File;
 use Rex::Commands::Fs;
 use Rex::Commands::Gather;
+use Rex::Commands::Run;
 
 Rex::Config->set( foo => "bar" );
 
