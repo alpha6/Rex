@@ -7,6 +7,7 @@ use YAML;
 use Rex::Commands;
 use Rex::Commands::File;
 use Rex::Commands::Fs;
+use Rex::Report::YAML;
 
 {
   no warnings 'once';
